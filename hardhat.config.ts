@@ -2,6 +2,7 @@ import { HardhatUserConfig } from 'hardhat/config'
 import '@nomicfoundation/hardhat-toolbox'
 import '@nomiclabs/hardhat-etherscan'
 import 'dotenv/config'
+import './tasks/block-number'
 
 const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL!
 const PRIVATE_KEY = process.env.PRIVATE_KEY!
