@@ -3,6 +3,7 @@ import '@nomicfoundation/hardhat-toolbox'
 import '@nomiclabs/hardhat-etherscan'
 import 'dotenv/config'
 import './tasks/block-number'
+import 'hardhat-gas-reporter'
 
 const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL!
 const PRIVATE_KEY = process.env.PRIVATE_KEY!
@@ -25,6 +26,9 @@ const config: HardhatUserConfig = {
     apiKey: ETHERSCAN_API_KEY,
   },
   solidity: '0.8.7',
+  gasReporter: {
+    enabled: true,
+  },
 }
 
 export default config
